@@ -175,22 +175,69 @@ export default function App() {
         </div>
       </section>
 
+
+{/*-------------------------  Email section -------------------------------------------------- */}
+
       <section className="py-24 text-center bg-[#234236] text-white">
         <Coffee className="mx-auto mb-6" size={40} />
         <h2 className="text-5xl mb-4">Join Our Coffee Community</h2>
         <p className="mb-8">
           Get exclusive releases, seasonal blends, and brewing tips.
         </p>
-        <div className="flex flex-col md:flex-row justify-center gap-4 max-w-xl mx-auto px-6">
-          <input
-            placeholder="Email Address"
-            className="flex-1 px-6 py-4 rounded-full text-black"
-          />
-          <button className="bg-white text-[#234236] px-8 py-4 rounded-full">
-            Subscribe
-          </button>
-        </div>
+       <div
+  className="
+    max-w-2xl
+    mx-auto
+    flex
+    flex-col
+    md:flex-row
+    items-center
+    gap-2
+    p-2
+    rounded-3xl
+    md:rounded-full
+    border
+    border-white/20
+    bg-white/10
+    backdrop-blur-md
+    focus-within:border-white/40
+    transition
+  "
+>
+  <input
+    type="email"
+    placeholder="Enter your email"
+    className="
+      flex-1
+      bg-transparent
+      px-6
+      py-4
+      text-white
+      placeholder:text-white/60
+      outline-none
+      w-full
+    "
+  />
+
+  <button
+    className="
+      bg-white
+      text-[#234236]
+      px-8
+      py-4
+      rounded-full
+      font-medium
+      hover:scale-105
+      transition
+      whitespace-nowrap
+    "
+  >
+    Subscribe
+  </button>
+</div>
       </section>
+
+      {/*  ------------------------- Footer ---------------------------------------------------- */}
 
       <footer className="bg-black text-white py-12">
         <div className="max-w-7xl mx-auto px-6 text-center">
