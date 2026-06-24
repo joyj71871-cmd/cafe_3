@@ -143,19 +143,85 @@ export default function App() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <h2 className="text-5xl text-center mb-12 text-[#234236]">
-          What Our Guests Say
-        </h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {["Best coffee in the city.", "Attention to detail is extraordinary.", "Unforgettable atmosphere."].map((t, i) => (
-            <div key={i} className="bg-white rounded-3xl p-8 shadow">
-              <p className="text-yellow-500 mb-3">★★★★★</p>
-              <p>{t}</p>
-            </div>
-          ))}
+{/*------------------------  Review Section -------------------------------------------------- */}
+      
+     <section className="max-w-7xl mx-auto px-6 py-32">
+  <div className="text-center mb-20">
+    <p className="uppercase tracking-[0.3em] text-[#234236]/60 text-sm mb-4">
+      Testimonials
+    </p>
+
+    <h2 className="text-5xl md:text-6xl font-light text-[#234236] mb-6">
+      What Our Guests Say
+    </h2>
+
+    <div className="w-24 h-px bg-[#234236]/20 mx-auto" />
+  </div>
+
+  <div className="grid lg:grid-cols-3 gap-8">
+    {[
+      {
+        quote:
+          "Hands down the finest coffee experience in New York. Every cup feels intentional and beautifully crafted.",
+        name: "Sophia Bennett",
+        role: "Creative Director",
+      },
+      {
+        quote:
+          "The atmosphere, the service, and the coffee are exceptional. It's become part of my daily ritual.",
+        name: "James Carter",
+        role: "Architect",
+      },
+      {
+        quote:
+          "A perfect blend of Scandinavian design and artisan coffee culture. Truly unforgettable.",
+        name: "Olivia Thompson",
+        role: "Photographer",
+      },
+    ].map((review, i) => (
+      <div
+        key={i}
+        className="
+          relative
+          bg-white/60
+          backdrop-blur-md
+          border
+          border-[#234236]/10
+          rounded-[32px]
+          p-10
+          hover:-translate-y-2
+          hover:shadow-2xl
+          transition-all
+          duration-500
+        "
+      >
+        <div className="text-7xl text-[#234236]/10 leading-none mb-6">
+          "
         </div>
-      </section>
+
+        <p className="text-lg leading-relaxed text-gray-700 mb-10">
+          {review.quote}
+        </p>
+
+        <div className="flex items-center justify-between">
+          <div>
+            <h4 className="font-medium text-[#234236]">
+              {review.name}
+            </h4>
+
+            <p className="text-sm text-gray-500">
+              {review.role}
+            </p>
+          </div>
+
+          <div className="text-[#C7A977] text-lg">
+            ★★★★★
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
 
       <section id="visit" className="max-w-7xl mx-auto px-6 py-24">
         <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -213,7 +279,6 @@ export default function App() {
       px-6
       py-4
       text-white
-      placeholder:text-white/60
       outline-none
       w-full
     "
